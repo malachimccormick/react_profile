@@ -1,15 +1,16 @@
 import React from "react";
 import {  MDBRow, MDBCol, MDBIcon } from "mdbreact";
 
+
 const FeaturesPage = () => {
   return (
     <section className="my-5">
         <h2 className="h1-responsive font-weight-bold text-center my-5" style={{marginTop:'-5px',textDecoration:'underline'}}>
           Full-Stack Web Developer
         </h2>
-        <p style={{font:'bolder'}}className="lead grey-text w-responsive text-center mx-auto mb-5">
-          Malachi McCormick is a full-stack (MERN) developer that
-          is based in Atlanta, Ga.
+        <p style={{font:'1.55em bolder'}}className="lead grey-text w-responsive text-center mx-auto mb-5">
+          Malachi McCormick is a full-stack (MERN) developer that uses Agile methods to solve
+          Web development issues in the Greater Atlanta Georgia area. 
         </p>
         <hr style={{width:'98%',marginBottom:'5%',marginTop:'-1px',marginLeft:'20px'}}></hr>
         <MDBRow>

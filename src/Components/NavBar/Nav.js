@@ -1,36 +1,50 @@
 import React, { Component } from "react";
-import { MDBNavbar, MDBNavbarBrand, MDBNavbarNav, MDBNavItem, MDBNavLink, MDBNavbarToggler, MDBCollapse, MDBDropdown,
-MDBDropdownToggle, MDBContainer} from "mdbreact";
+import {
+  MDBNavbar,
+  MDBNavbarBrand,
+  MDBNavbarNav,
+  MDBNavItem,
+  MDBNavLink,
+  MDBNavbarToggler,
+  MDBCollapse,
+  MDBDropdown,
+  MDBDropdownToggle,
+  MDBDropdownMenu,
+  MDBDropdownItem,
+  MDBContainer
+} from "mdbreact";
+
+
 
 class NavbarPage extends Component {
-state = {
-  collapseID: ""
-};
-
-toggleCollapse = collapseID => () =>
+  state = {
+    collapseID: ""
+  };
+  
+  toggleCollapse = collapseID => () =>
   this.setState(prevState => ({
-  collapseID: prevState.collapseID !== collapseID ? collapseID : ""
-}));
-
-render() {
-  return (
- 
+    collapseID: prevState.collapseID !== collapseID ? collapseID : ""
+  }));
+  
+  render() {
+    return (
+      
     <MDBContainer >
       <MDBNavbar color="default-color" dark expand="md" style={{ marginTop: "10px", height:'65px' }}>
-        <MDBNavbarBrand>
+        < MDBNavbarBrand>
           <img src= {require('./darkLogo.png')} style={{ marginTop: '20px', height: "110px", padding: 0 }} alt='' />
         </MDBNavbarBrand>
-        <MDBNavbarToggler onClick={this.toggleCollapse("navbarCollapse3")} />
+        < MDBNavbarToggler></MDBNavbarToggler>
         <MDBCollapse id="navbarCollapse3" isOpen={this.state.collapseID} navbar>
           <MDBNavbarNav center style={{fontSize:'14pt'}}>
             <MDBNavItem>
-              <MDBNavLink to="#!">Home</MDBNavLink>
+              <MDBNavLink to="/GitHub">GitHub</MDBNavLink>
             </MDBNavItem>
             <MDBNavItem>
-              <MDBNavLink to="#!">Resume</MDBNavLink>
+              <MDBNavLink to='/resume' >Resume</MDBNavLink>
             </MDBNavItem>
             <MDBNavItem>
-              <MDBNavLink to='/Email' style={linkStyle}>Email</MDBNavLink>
+              <MDBNavLink to="/Email" style={linkStyle}>Email</MDBNavLink>
             </MDBNavItem>
           </MDBNavbarNav>
           <MDBNavbarNav right>
@@ -40,6 +54,10 @@ render() {
                   <img src={require("./pic.jpeg")} className="rounded-circle z-depth-0"
                     style={{ height: "45px", padding: 0 }} alt="" />
                 </MDBDropdownToggle>
+                <MDBDropdownMenu className="dropdown-default" right>
+                  <MDBDropdownItem href="#!">My account</MDBDropdownItem>
+                  <MDBDropdownItem href="#!">Log out</MDBDropdownItem>
+                </MDBDropdownMenu>
               </MDBDropdown>
             </MDBNavItem>
           </MDBNavbarNav>

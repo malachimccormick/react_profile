@@ -1,6 +1,6 @@
 
 .App{
-  background-image: url('Components/Layout/bg.png');
+  background-image: url('Components/NavBar/bg.png');
   width: 99%;
 }
 .App-header {
@@ -35,4 +35,17 @@
   background-image: linear-gradient(to right, #2a3b4e, #f9f9f9);
 }
 
-
+.container {
+  max-width: 1390px;
+  color: white;
+  margin-bottom: 70px
+}
+.md-form label {
+  color: white
+}
+.form-control:focus {
+  color:white
+}
+.form-control{
+  color: white
+}

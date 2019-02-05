@@ -1,7 +1,8 @@
 import React from "react";
 import {  MDBContainer, MDBRow, MDBCol, MDBIcon, MDBBtn, MDBInput } from "mdbreact";
 
-const ContactPage = () => {
+
+const EmailForm = () => {
   return (
     <MDBContainer>
       <MDBRow>
@@ -43,7 +44,7 @@ const ContactPage = () => {
             </MDBRow>
           </form>
           <div className="text-center text-md-left">
-            <MDBBtn color="primary" size="md">
+            <MDBBtn color="primary" size="md" action="mailto:Malachimccormick@gmail.com" method='post'>
               Send
             </MDBBtn>
           </div>
@@ -69,4 +70,4 @@ const ContactPage = () => {
   );
 }
 
-export default ContactPage;
+export default EmailForm;

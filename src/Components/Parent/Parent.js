@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import NavbarPage from '..//Layout/Nav'
+import NavbarPage from '..//NavBar/Nav'
 import Intro from '../FirstDiv/ProfileSec'
 
 import Footer from '../Footer/Footer'
